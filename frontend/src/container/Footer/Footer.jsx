@@ -26,14 +26,11 @@ const Footer = () => {
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-    console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+    console.log(publicKey);  // Make sure this is logged correctly
 
-    emailjs.send({
-
-      serviceId,
-      templateId,
-      to_name: 'Francesca',  // Change to the name you want
-      from_name: from_name,   // Use the name input from the user
+    emailjs.send(serviceId, templateId, {
+      from_name: from_name,
+      email: email,
       message: message,
     }, publicKey)
     .then(() => {
@@ -41,10 +38,11 @@ const Footer = () => {
       setIsFormSubmitted(true);
     })
     .catch((err) => {
-      console.log(err);
+      console.error('Error sending email:', err);  // Better error logging
       setLoading(false);
     });
-  };
+};
+
 
   return (
     <>
