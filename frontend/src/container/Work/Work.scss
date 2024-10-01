@@ -57,7 +57,7 @@
     background-color: #fff;
     color: #000;
 
-    cursor: pointer;
+    // cursor: pointer;
     transition: all 0.3s ease;
 
     &:hover {
@@ -77,19 +77,19 @@
   }
 }
 
-.lines-work {
-  position: absolute;
-  left: 2rem;
-  bottom: 0;
-  height: 2px; // Thickness of the underline
-  background: #000; // Color of the underline
-  width: 0; // Starts from 0 and grows to 100%
-}
+// .lines-work {
+//   position: absolute;
+//   left: 2rem;
+//   bottom: 0;
+//   height: 2px; // Thickness of the underline
+//   background: #000; // Color of the underline
+//   width: 0; // Starts from 0 and grows to 100%
+// }
 
 .app__work-img {
   width: 100%;
   height: 230px;
-
+  cursor: pointer;
   position: relative;
 
   img {

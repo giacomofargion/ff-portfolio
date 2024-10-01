@@ -4,16 +4,34 @@ const SocialMedia = () => {
   return (
     <div className="app__social">
       <div>
-        <FaTwitter />
+        <a
+          href="https://x.com/ffargion"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaTwitter />
+        </a>
       </div>
       <div>
-        <FaBandcamp />
+        <a
+          href="https://francescafargion.bandcamp.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaBandcamp />
+        </a>
       </div>
       <div>
-        <FaSoundcloud />
+        <a
+          href="https://soundcloud.com/francesca-fargion"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaSoundcloud />
+        </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SocialMedia
+export default SocialMedia;

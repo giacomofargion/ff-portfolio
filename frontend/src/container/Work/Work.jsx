@@ -50,7 +50,7 @@ const Work = () => {
       </div>
 
       <div className="app__work-filter">
-        {["Music", "Video", "Performances", "Fargions", "All"].map(
+        {["Music", "Video", "Performances", " The Fargions", "All"].map(
           (item, index) => (
             <div
               key={index}
@@ -72,8 +72,10 @@ const Work = () => {
       >
         {filterWork.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
+              <a href={work.projectLink} target="_blank" rel="noreferrer">
             <div className="app__work-img app__flex">
-             <img src={urlFor(work.imgUrl).url()} alt={work.name} />
+                <img src={urlFor(work.imgUrl).url()} alt={work.name} />
+
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
@@ -104,7 +106,7 @@ const Work = () => {
                 </p>
               </motion.div>
             </div>
-
+            </a>
             <div className="app__work-content app__flex">
               <h4 className="bold-text">{work.title}</h4>
               <p className="p-text" style={{ marginTop: 10 }}>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Navbar.scss";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
+import SocialMedia from "../SocialMedia";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -42,6 +43,10 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+
+            <div className="app__navbar-social">
+              <SocialMedia />
+            </div>
           </motion.div>
         )}
       </div>
