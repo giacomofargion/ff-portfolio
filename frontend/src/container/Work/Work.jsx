@@ -50,7 +50,7 @@ const Work = () => {
       </div>
 
       <div className="app__work-filter">
-        {["Music", "Video", "Performances", "The Fargions", "All"].map(
+        {["Audio", "Video", "Performances", "The Fargions", "All"].map(
           (item, index) => (
             <div
               key={index}
